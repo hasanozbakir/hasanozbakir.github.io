@@ -1,0 +1,32 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <form id="form-container">
+            <input id="input-color" type="color" value="#F55A5A">
+            <select id="mode-color">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option>
+            </select>
+            <button id="scheme-color">Get color scheme</button>
+        </form>
+        <div class="container">
+            <div id="container-1" class="color"></div>
+            <div id="container-2" class="color"></div>
+            <div id="container-3" class="color"></div>
+            <div id="container-4" class="color"></div>
+            <div id="container-5" class="color"></div>
+        </div>
+        <div id="hex-color"></div>
+        <script src="index.js"></script>
+    </body>
+</html>

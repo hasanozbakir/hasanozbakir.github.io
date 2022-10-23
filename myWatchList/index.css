@@ -124,6 +124,10 @@ form {
     margin-top: 200px;
 }
 
+#start-img {
+    margin-top: 180px;
+}
+
 #search,
 #my-watch-list {
     display: flex;

@@ -17,7 +17,7 @@ function renderEmptyListPage() {
 async function renderImdbIDArray() {
     movies = []
     const value = inputEl.value
-    const res = await fetch(`https://www.omdbapi.com/?s=${value}&apikey=488eafd6`)
+    const res = await fetch(`https://www.omdbapi.com/?s=${value}&type=movie&apikey=488eafd6`)
     const data = await res.json()
     const dataResponse = await data.Response  
 

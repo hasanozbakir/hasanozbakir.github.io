@@ -52,7 +52,7 @@ body {
 header {
     height: 208px;
     background-image: url("images/image.jpg");
-    background-color: #0E0E0E;
+    background-color: #212020;
     background-blend-mode: overlay;
     background-position-x: -80px;
     background-position-y: -150px;
@@ -126,7 +126,6 @@ form {
 
 #search,
 #my-watch-list {
-    margin-top: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,7 +136,7 @@ form {
 }
 
 #my-watch-list h3:first-child {
-   margin-bottom: 0;
+   margin: 180px auto 0 auto;
 }
 
 section,
@@ -185,6 +184,7 @@ section {
     align-self: end;
 }
 
+.start-add-btn,
 .add-btn,
 .remove-btn {
     width: 16px;
@@ -193,6 +193,7 @@ section {
     border-radius: 50%;
 }
 
+.start-add-btn,
 .add-btn {
     background-image: url("images/add-icon.png");
 }

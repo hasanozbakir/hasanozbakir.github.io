@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--font-family-->
+
+        <!-- Karla -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap" rel="stylesheet">
+
+        <!-- Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body light-mode="light">
+        <main class="container">
+            <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                <span></span>
+                <span></span>
+            </button>
+            <section class="container-row-one">
+                <h1 id="title-el">Generate a <br> <span class="title-colored-part">random password</span></h1>
+                <p class="advice-el">Never use a insecure password again</p>
+                <div class="flex-wrapper">   
+                    <div class="btn-container">
+                        <button class="btn" onclick="generatePassword()">Generate passwords</button>
+                        <button class="btn" onclick="resetPassword()">Reset passwords</button>
+                    </div>   
+                    <div class="property-btn-container">
+                        <p class="properties-text">Password contains: </p>
+                        <div class="checkbox-container">
+                            <div class="checkbox-wrapper">
+                                <div class="toggle-wrapper green">  
+                                    <input class="toggle-checkbox" type="checkbox" id="symbols">
+                                    <div class="toggle-container">
+                                        <div class="toggle-ball"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label for="symbols">Symbols</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <div class="checkbox-wrapper">
+                                <div class="toggle-wrapper green">  
+                                    <input class="toggle-checkbox" type="checkbox" id="numbers">
+                                    <div class="toggle-container">
+                                        <div class="toggle-ball"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label for="numbers">Numbers</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="slidecontainer">
+                    <label class="properties-text" for="my-range">Password length:    <span id="password-length"></span></label>
+                    <input type="range" min="6" max="20" value="15" class="slider" id="my-range">
+                </div>
+                <hr>
+            </section>
+            <section class="container-row-two">
+                <div>
+                    <div class="password-container" onmouseleave="setStyleBack(this)">
+                        <p class="password" id="first-password" ></p>
+                        <div class="copy-icon">
+                            <i class="fa fa-copy" onclick="copyPassword(this)" ></i>
+                        </div>
+                    </div>
+                    <span class="copied-message">Copied!</span>
+                </div>
+                <div>
+                    <div class="password-container" onmouseleave="setStyleBack(this)">
+                        <p class="password" id="second-password" ></p>
+                        <div class="copy-icon">
+                            <i class="fa fa-copy" onclick="copyPassword(this)" ></i>
+                        </div>
+                    </div>
+                    <span class="copied-message">Copied!</span>
+                </div>
+            </section>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>

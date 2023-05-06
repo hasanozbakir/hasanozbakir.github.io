@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #273549;
+    transition: background-color 0.3s;
+    font-family: 'Inter', sans-serif;
+    color: #6B7280;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.checkbox-container label {
+    margin-top: 14px;
+    margin-left: 12px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.title-colored-part {
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+    color: #10B981;
+}
+
+.advice-el {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.properties-text {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+}
+
+.container {
+    background: #ECFDF5;
+    width: 630px;
+    height: 100vh;
+    padding: 35px 52px 115px;
+    margin: 0 auto;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: #10B981;
+    color: #FFFFFF;
+    padding: 9px 17px 9px 15px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0;
+}
+
+.btn:hover {
+    background: #30d06b;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.property-btn-container {
+    width: 250px;
+    align-self: start;
+}
+
+hr {
+    border: 1px solid #D5D4D8;
+    margin-top: 30px;
+}
+
+.container-row-two,
+.flex-wrapper,
+.slidecontainer,
+.checkbox-wrapper,
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox-wrapper {
+    width: 100%;
+}
+
+.flex-wrapper {
+    align-items: center;
+}
+
+.checkbox-container {
+    width: 50%;
+    margin-top: 6px;
+}
+
+#password-length {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: #d1d1d6;
+    color: #10B981;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-left: 18px;
+ 
+}
+
+.password-container {
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    background: #273549;
+    border-radius: 6px;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-container:hover .copy-icon,
+.password-container:focus .copy-icon {
+    display: block;
+}
+
+.password {
+    color: #5DEF92;
+    font-size: 16px;
+    font-weight: 500; 
+    text-align: center;
+    margin: auto;   
+}
+
+.copy-icon {
+    display: none;
+    padding: 4px;
+    border: 1px solid #55F991;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.fa-copy {
+    color: #55F991;
+}
+
+.copied-message {
+    color: #6B7280;
+    display: none;
+    z-index: 1;
+    position: relative;
+    top: 10px;
+    left: 170px;
+    border: none;
+    background-color: #55F991;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+/* Light Mode Styles */
+
+.light-mode-button {
+    display: block;
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.light-mode-button:focus {
+    outline: none; 
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #10B981;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+/* Dark Mode Styles */
+
+body[light-mode="dark"] {
+    background-color: #D5D4D8;
+    color: #D5D4D8;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+    background-color: #D5D4D8;
+    color: #1C1C1C;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(2) {
+    left: 45px;
+    background-color: #1C1C1C;
+}
+
+body[light-mode="dark"] .title-colored-part {
+    color: #4ADF86;
+}
+
+body[light-mode="dark"] .container {
+    background: #1F2937;
+}
+
+body[light-mode="dark"] hr {
+    border: 1px solid #2F3E53;
+}
+
+body[light-mode="dark"] .password-container {
+    background: #273549;
+}
+
+body[light-mode="dark"] .password {
+    color: #55F991;
+}
+
+/* Slider Style */
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+  
+/* The slider itself */
+.slider {
+    margin-top: 16px;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 250px;
+    height: 12px; /* Specified height */
+    border-radius: 6px;
+    background: #D5D4D8; /* Grey background */
+    outline: none; 
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    background-image:
+        radial-gradient(rgba(#fff, .6), rgba(#fff, 0) 16%),
+        radial-gradient(#d2d4dc, #babac2);
+    box-shadow:
+        0 0 2px #8d889e,
+        inset -.5px -.5px 2px #d1d1d6,
+        inset -1px -1px 2px #8c869e;
+    transition: all .2s;
+}
+  
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+  
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 22px; /* Set a specific slider handle width */
+    height: 22px; /* Slider handle height */
+    border-radius: 50%;
+    background: #5DEF92; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    box-shadow:
+        inset .5px 0 0 #5DEF92,
+        inset -.5px 0 0 #5DEF92,
+        inset 1px 2px 1px 2px #10B981;
+}
+  
+.slider::-moz-range-thumb {
+    width: 18px; /* Set a specific slider handle width */
+    height: 18px; /* Slider handle height */
+    border-radius: 50%;
+    background: #5DEF92; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    box-shadow:
+        inset .5px 0 0 #5DEF92,
+        inset -.5px 0 0 #5DEF92,
+        inset 1px 2px 1px 2px #10B981;
+}
+
+/* Checkbox style */
+
+.toggle-wrapper {
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+  
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+  
+.toggle-container {
+    display: flex;
+    position: relative;
+    border-radius: inherit;
+    width: 48px;
+    height: 24px;
+    background-color: #d1d4dc;
+    box-shadow:
+        inset .5px 0 0 #d4d2de,
+        inset -.5px 0 0 #d4d2de,
+        inset 1px 2px 1px 1px #b5b5c3;
+    mask-image: radial-gradient(#fff, #000);
+    transition: all .4s;
+
+    .toggle-wrapper.green > .toggle-checkbox:checked + & {
+        background-color: #5DEF92;
+        box-shadow:
+            inset .5px 0 0 #5DEF92,
+            inset -.5px 0 0 #5DEF92,
+            inset 1px 2px 1px 2px #10B981;
+    }
+
+    .toggle-wrapper.green > .toggle-checkbox:checked:hover + & {
+        box-shadow: 1px 2px 1px 2px #5ac99b;
+    }
+
+    .toggle-wrapper.green > .toggle-checkbox:hover + & {
+        box-shadow: 1px 2px 1px 2px #ede2e2;
+    }
+
+}
+
+.toggle-ball {
+    position: relative;
+    border-radius: 50%;
+    margin: 2px;  
+    width: 20px;
+    height: 20px;
+    background-image:
+        radial-gradient(rgba(#fff, .6), rgba(#fff, 0) 16%),
+        radial-gradient(#d2d4dc, #babac2);
+    background-position: -px -1px;
+    background-size: auto, calc(100% + 2px) calc(100% + 2px);
+    background-repeat: no-repeat;
+    box-shadow:
+        2px 2px 2px #8d889e,
+        inset .5px .5px 2px #d1d1d6,
+        inset -1px -1px 2px #8c869e;
+    transition: transform .4s, box-shadow .4s;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        background-position: -2px -2px;
+        background-size: auto, calc(100% + 2px) calc(100% + 2px);
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity .4s;
+      
+        .toggle-wrapper.green > .toggle-container > & {
+            background-image:
+                radial-gradient(rgba(#fff, .6), rgba(#fff, 0) 16%),
+                radial-gradient(#30d06b, #17b681);
+            box-shadow:
+                2px 2px 2px #0d5f7c,
+                inset .5px .5px 2px #14b680,
+                inset -.5px -.5px 2px #3042b5;
+        }
+    }
+    
+    .toggle-wrapper > .toggle-checkbox:checked + .toggle-container > &::after {
+        opacity: 1;
+    }
+    
+    .toggle-checkbox:checked + .toggle-container > & {
+        transform: translateX(100%);
+    }
+}
